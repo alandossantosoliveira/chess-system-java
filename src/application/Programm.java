@@ -27,8 +27,10 @@ public class Programm {
 				ChessPosition source = UI.readChessPosition(sc);
 				
 				boolean[][] possibleMoves = chessMatch.possibleMoves(source);
+				boolean[][] checkYourSelf = chessMatch.getTestCheckYourSelf(source);
+				
 				UI.clearScreen();
-				UI.printBoard(chessMatch.getPieces(), possibleMoves);
+				UI.printBoard(chessMatch.getPieces(), possibleMoves, checkYourSelf);
 				
 				System.out.println();
 				System.out.print("Target: ");
